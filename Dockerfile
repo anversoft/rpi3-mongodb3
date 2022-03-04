@@ -1,8 +1,8 @@
 # Docker Image for MongoDB 3.0.14 on RPi3
 
-FROM resin/rpi-raspbian:stretch
+FROM balenalib/rpi-raspbian:stretch
 
-LABEL created_by=https://github.com/andresvidal/rpi3-mongodb3
+LABEL created_by=https://github.com/anversoft/rpi3-mongodb3
 LABEL binaries=https://andyfelong.com/2017/08/mongodb-3-0-14-for-raspbian-stretch
 LABEL mongod_version=3.0.14
 
@@ -15,7 +15,7 @@ RUN mkdir -p \
     /data/db \
     /data/configdb \
     /var/log/mongodb \
-&& chown -R mongodb:mongodb \
+    && chown -R mongodb:mongodb \
     /usr/bin/mongo* \
     /data/db \
     /data/configdb \
